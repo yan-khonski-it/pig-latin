@@ -1,8 +1,7 @@
-package com.citrix.tech.piglatin.utils;
+package com.yk.tech.piglatin.utils;
 
 import org.junit.jupiter.api.Test;
 
-import static com.citrix.tech.piglatin.utils.CompoundWordUtils.HYPHEN;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -15,7 +14,7 @@ class PunctuationUtilsTest {
         String noPunctuation = PunctuationUtils.removePunctuation(word);
         assertEquals("johnhihellocantwait+-no-wayand_this", noPunctuation);
 
-        assertTrue(noPunctuation.contains(HYPHEN)); // Hyphen should not be removed here.
+        assertTrue(noPunctuation.contains(CompoundWordUtils.HYPHEN)); // Hyphen should not be removed here.
     }
 
     @Test

@@ -1,8 +1,8 @@
-package com.citrix.tech.piglatin.utils;
+package com.yk.tech.piglatin.utils;
 
 import org.junit.jupiter.api.Test;
 
-import static com.citrix.tech.piglatin.utils.EnglishCharacterUtils.ABC_LOWER_CASED;
+import static com.yk.tech.piglatin.utils.EnglishCharacterUtils.ABC_LOWER_CASED;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CharUtilsTest {

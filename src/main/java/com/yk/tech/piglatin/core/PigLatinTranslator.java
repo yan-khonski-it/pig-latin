@@ -1,10 +1,9 @@
-package com.citrix.tech.piglatin.core;
+package com.yk.tech.piglatin.core;
 
+import com.yk.tech.piglatin.utils.CompoundWordUtils;
 import org.apache.commons.lang3.StringUtils;
 
-import static com.citrix.tech.piglatin.utils.CompoundWordUtils.isCompoundWord;
-import static com.citrix.tech.piglatin.utils.CompoundWordUtils.splitMapAndJoinCompoundWord;
-import static com.citrix.tech.piglatin.utils.TextUtils.splitTextWithSpacesPreserved;
+import static com.yk.tech.piglatin.utils.TextUtils.splitTextWithSpacesPreserved;
 
 /**
  * Translates ENGLISH text into Pig Latin.
@@ -41,8 +40,8 @@ public class PigLatinTranslator {
     }
 
     private CharSequence translate(final String word) {
-        if (isCompoundWord(word)) {
-            return splitMapAndJoinCompoundWord(word, wordTranslator::translate);
+        if (CompoundWordUtils.isCompoundWord(word)) {
+            return CompoundWordUtils.splitMapAndJoinCompoundWord(word, wordTranslator::translate);
         } else {
             return wordTranslator.translate(word);
         }

@@ -1,6 +1,6 @@
-package com.citrix.tech.piglatin;
+package com.yk.tech.piglatin;
 
-import com.citrix.tech.piglatin.core.PigLatinTranslator;
+import com.yk.tech.piglatin.core.PigLatinTranslator;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -5,7 +5,7 @@
         </encoder>
     </appender>
 
-    <logger name="com.citrix.tech.piglatin" level="info" additivity="false">
+    <logger name="com.yk.tech.piglatin" level="info" additivity="false">
         <appender-ref ref="STDOUT"/>
     </logger>
 

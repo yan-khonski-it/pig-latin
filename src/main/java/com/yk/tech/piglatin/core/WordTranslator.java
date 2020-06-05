@@ -1,12 +1,8 @@
-package com.citrix.tech.piglatin.core;
+package com.yk.tech.piglatin.core;
 
-import com.citrix.tech.piglatin.utils.EnglishCharacterUtils;
-import com.citrix.tech.piglatin.utils.PunctuationUtils;
-
-import static com.citrix.tech.piglatin.utils.CapitalizationUtil.applyCapitalization;
-import static com.citrix.tech.piglatin.utils.EnglishCharacterUtils.wordStartsWithConsonant;
-import static com.citrix.tech.piglatin.utils.EnglishCharacterUtils.wordStartsWithVowel;
-import static com.citrix.tech.piglatin.utils.PunctuationUtils.applyPunctuation;
+import com.yk.tech.piglatin.utils.EnglishCharacterUtils;
+import com.yk.tech.piglatin.utils.PunctuationUtils;
+import com.yk.tech.piglatin.utils.CapitalizationUtil;
 
 /**
  * Translates word into Pig Latin.
@@ -55,10 +51,10 @@ class WordTranslator {
 
         final String lowerCasedWithoutPunctuation = PunctuationUtils.removePunctuation(lowerCasedWord);
 
-        if (wordStartsWithConsonant(lowerCasedWithoutPunctuation)) {
+        if (EnglishCharacterUtils.wordStartsWithConsonant(lowerCasedWithoutPunctuation)) {
             final StringBuilder wordWithMovedLetters = moveFirstLetterToTheEndAndAppendAy(lowerCasedWithoutPunctuation);
             return applyRules(word, wordWithMovedLetters);
-        } else if (wordStartsWithVowel(lowerCasedWithoutPunctuation)) {
+        } else if (EnglishCharacterUtils.wordStartsWithVowel(lowerCasedWithoutPunctuation)) {
             final StringBuilder wordWithMovedLetters = appendWayToTheEnd(lowerCasedWithoutPunctuation);
             return applyRules(word, wordWithMovedLetters);
         }
@@ -71,8 +67,8 @@ class WordTranslator {
         // TODO What has higher priority: capitalization or punctuation?
         // In the task description, capitalization requirement was after punctuation,
         // so I gave capitalization a lower priority.
-        applyPunctuation(word, stringBuilder);
-        applyCapitalization(word, stringBuilder);
+        PunctuationUtils.applyPunctuation(word, stringBuilder);
+        CapitalizationUtil.applyCapitalization(word, stringBuilder);
         return stringBuilder;
     }
 

@@ -1,4 +1,4 @@
-package com.citrix.tech.piglatin.utils;
+package com.yk.tech.piglatin.utils;
 
 /**
  * Util to make capital letters in a word.

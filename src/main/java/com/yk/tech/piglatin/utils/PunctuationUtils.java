@@ -1,8 +1,6 @@
-package com.citrix.tech.piglatin.utils;
+package com.yk.tech.piglatin.utils;
 
 import java.util.Set;
-
-import static com.citrix.tech.piglatin.utils.CharUtils.initCharacters;
 
 /**
  * Util class to handle punctuation requirements.
@@ -18,7 +16,7 @@ public final class PunctuationUtils {
      */
     private static final String PUNCTUATION_CHARACTERS = ".?!,;:–—―(){}[]\"'’";
 
-    private static final Set<Character> PUNCTUATIONS = initCharacters(PUNCTUATION_CHARACTERS);
+    private static final Set<Character> PUNCTUATIONS = CharUtils.initCharacters(PUNCTUATION_CHARACTERS);
 
     private PunctuationUtils() {
         throw new IllegalStateException("No instance is allowed.");

@@ -1,4 +1,4 @@
-package com.citrix.tech.piglatin.utils;
+package com.yk.tech.piglatin.utils;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

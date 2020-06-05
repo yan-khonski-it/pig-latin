@@ -1,8 +1,6 @@
-package com.citrix.tech.piglatin.utils;
+package com.yk.tech.piglatin.utils;
 
 import java.util.Set;
-
-import static com.citrix.tech.piglatin.utils.CharUtils.initCharacters;
 
 /**
  * Encapsulates logic to work with English characters.
@@ -19,15 +17,15 @@ public final class EnglishCharacterUtils {
 
 
     // English letters
-    private static final Set<Character> LETTERS = initCharacters(ABC);
+    private static final Set<Character> LETTERS = CharUtils.initCharacters(ABC);
 
     // Vowels
     // https://simple.wikipedia.org/wiki/Vowel
-    private static final Set<Character> VOWELS = initCharacters(VOWEL_LETTERS);
+    private static final Set<Character> VOWELS = CharUtils.initCharacters(VOWEL_LETTERS);
 
     // Consonants
     // https://simple.wikipedia.org/wiki/Consonant
-    private static final Set<Character> CONSONANTS = initCharacters(CONSONANT_LETTERS);
+    private static final Set<Character> CONSONANTS = CharUtils.initCharacters(CONSONANT_LETTERS);
 
     // Y - can be both a vowel and a consonant.
     // We are interested in cases where a word starts with Y.
