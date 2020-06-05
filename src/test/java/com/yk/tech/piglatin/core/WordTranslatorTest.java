@@ -200,7 +200,7 @@ class WordTranslatorTest {
         // TODO - check requirement. Depending on priority capitalization and punctuation, this result can be different.
         String text4 = "end.Can't!Nothing?";
         CharSequence translated4 = wordTranslator.translateEnglishWord(text4);
-        assertEquals("endcAn.tno't!hingway?", translated4.toString());
+        assertEquals("endcAn.tno't!Hingway?", translated4.toString());
 
         String text5 = "McDogla's!";
         CharSequence translated5 = wordTranslator.translateEnglishWord(text5);

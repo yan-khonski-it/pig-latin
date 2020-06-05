@@ -66,9 +66,11 @@ class WordTranslator {
     private CharSequence applyRules(final String word, final StringBuilder stringBuilder) {
         // TODO What has higher priority: capitalization or punctuation?
         // In the task description, capitalization requirement was after punctuation,
-        // so I gave capitalization a lower priority.
-        PunctuationUtils.applyPunctuation(word, stringBuilder);
+        // However, after punctuation is applied, capitalization may be broken.
+
         CapitalizationUtil.applyCapitalization(word, stringBuilder);
+        PunctuationUtils.applyPunctuation(word, stringBuilder);
+
         return stringBuilder;
     }
 
